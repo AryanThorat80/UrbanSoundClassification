@@ -46,3 +46,7 @@ async def classify_sound(file: UploadFile = File(...)):
     }
 
     return result
+
+@app.get("/healthz")
+def health_check():
+    return {"status": "ok"}
